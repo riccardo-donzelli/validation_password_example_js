@@ -1,0 +1,86 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Public Sans', sans-serif;
+    background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: center;
+    padding-top: 5rem;
+}
+
+h2 {
+    margin-bottom: 2em;
+}
+
+#form-box {
+    min-height: 250px;
+    width: 370px;
+    padding: 1.5rem 1.5rem 3rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+label {
+    font-size: 1.2rem;
+}
+
+input:not(#button) {
+    height: 2.2em;
+    width: 250px;
+    border: none;
+    border-radius: 8px;
+    padding-left: 1em;
+    margin: 0.75em 0;
+}
+
+#button {
+    border: none;
+    border-radius: 8px;
+    height: 2.5em;
+    width: 4em;
+    margin: 1em 0 2em 0;
+    cursor: pointer;
+}
+
+#button:active {
+    box-shadow: 0 4px 6px 4px rgba(0, 0, 0, 0.2);
+    background-color: transparent;
+}
+
+.criteria h4 {
+    margin: 0.8em 0;
+}
+
+.criteria p {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    content: "\2714";
+    margin-right: 0.5em;
+}
+
+.invalid {
+    color: darkred;
+}
+
+.invalid:before {
+    position: relative;
+    content: "\2716";
+    margin-right: 0.5em;
+}
