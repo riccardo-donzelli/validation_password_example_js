@@ -70,10 +70,19 @@ function checkPassword() {
     }
 }
 
+function passwordIsCorrect(e) {
+    e.preventDefault()
+    const formBox = document.getElementById("form-box");
+    const messageBox = document.getElementById("message-box");
+    const criteriaList = document.querySelectorAll(".valid");
+    
+    if (criteriaList.length === 4) {
+        formBox.style.display = "none";
+        messageBox.style.display = "block";
+    } 
+}
+
 // EVENTS LISTENERS
 user.addEventListener("blur", checkUser);
 password.addEventListener("keyup", checkPassword);
-button.addEventListener("click", (e) => {
-    e.preventDefault();
-})
-
+button.addEventListener("click", passwordIsCorrect);
